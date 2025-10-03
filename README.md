@@ -11,7 +11,7 @@ This project consists of two main components:
 
 ## Features
 
--   Secure connection with a configurable handshake mechanism
+-   Secure connection (kinda?) with a configurable handshake mechanism
 -   Bidirectional data forwarding
 -   Automatic reconnection on failure
 -   Asynchronous I/O for high performance
