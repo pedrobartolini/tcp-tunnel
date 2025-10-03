@@ -9,5 +9,5 @@ anyhow = { workspace = true }
 log = { workspace = true }
 env_logger = { workspace = true }
 dotenv = { workspace = true }
-tunnel_common = { path = "../common" }
+shared = { path = "../shared" }
 

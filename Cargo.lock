@@ -437,6 +437,14 @@ dependencies = [
 ]
 
 [[package]]
+name = "shared"
+version = "0.1.0"
+dependencies = [
+ "anyhow",
+ "dotenv_codegen",
+]
+
+[[package]]
 name = "signal-hook-registry"
 version = "1.4.6"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -528,16 +536,8 @@ dependencies = [
  "dotenv",
  "env_logger",
  "log",
+ "shared",
  "tokio",
- "tunnel_common",
-]
-
-[[package]]
-name = "tunnel_common"
-version = "0.1.0"
-dependencies = [
- "anyhow",
- "dotenv_codegen",
 ]
 
 [[package]]
@@ -548,8 +548,8 @@ dependencies = [
  "dotenv",
  "env_logger",
  "log",
+ "shared",
  "tokio",
- "tunnel_common",
 ]
 
 [[package]]

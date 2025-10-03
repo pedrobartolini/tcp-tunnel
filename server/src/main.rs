@@ -1,7 +1,7 @@
+use shared::*;
 use tokio::io::AsyncReadExt;
 use tokio::net::TcpListener;
 use tokio::net::TcpStream;
-use tunnel_common::*;
 
 #[tokio::main]
 async fn main() -> anyhow::Result<()> {
