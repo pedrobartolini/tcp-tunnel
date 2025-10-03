@@ -9,9 +9,9 @@ async fn main() -> anyhow::Result<()> {
     env_logger::init();
 
     let tunnel_server = TcpListener::bind(("0.0.0.0", PUBLIC_SERVER_PORT)).await?;
-    let local_server = TcpListener::bind(("127.0.0.1", PRIVATE_SERVER_PORT)).await?;
-
     log::info!("Listening for tunnel connections on {:?}", tunnel_server.local_addr());
+
+    let local_server = TcpListener::bind(("127.0.0.1", PRIVATE_SERVER_PORT)).await?;
     log::info!("Listening for local connections on {:?}", local_server.local_addr());
 
     loop {
@@ -30,12 +30,10 @@ async fn main() -> anyhow::Result<()> {
 }
 
 async fn validate_tunnel_stream(stream: &mut TcpStream, expected: &str) -> anyhow::Result<()> {
-    let mut buffer = vec![0u8; expected.len()];
-
     log::info!("Waiting for tunnel handshake");
 
+    let mut buffer = vec![0u8; expected.len()];
     stream.read_exact(&mut buffer).await.map_err(|err| anyhow::anyhow!("Failed to read from tunnel stream: {err}"))?;
-
     log::info!("Received tunnel handshake: {:?}", String::from_utf8_lossy(&buffer));
 
     if buffer != expected.as_bytes() {
