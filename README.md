@@ -51,3 +51,5 @@ The compiled binaries will be available in the `target/release` directory.
 -   Add TLS support for secure communication
 -   Implement extra communication to manage the Tunnel Client, e.g., to close the tunnel remotely, change the target address, etc.
 -   Add TUI or GUI to configure the Tunnel Client, like said above
+-   Transform client into a system service (e.g., Windows Service, Linux Daemon)
+-   Create installers for easier deployment
