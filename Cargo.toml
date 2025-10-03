@@ -1,0 +1,11 @@
+[workspace]
+members = ["client", "server", "common"]
+resolver = "3"
+
+[workspace.dependencies]
+tokio = { version = "*", features = ["full"] }
+anyhow = "*"
+log = "*"
+env_logger = "*"
+dotenv = "*"
+dotenv_codegen = "*"

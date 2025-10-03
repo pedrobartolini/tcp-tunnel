@@ -1,0 +1,13 @@
+[package]
+name = "tunnel_client"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+tokio = { workspace = true }
+anyhow = { workspace = true }
+log = { workspace = true }
+env_logger = { workspace = true }
+dotenv = { workspace = true }
+tunnel_common = { path = "../common" }
+
