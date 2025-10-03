@@ -5,7 +5,7 @@ edition = "2024"
 
 [lib]
 name = "shared"
-path = "lib.rs"
+path = "src/lib.rs"
 
 [dependencies]
 dotenv_codegen = { workspace = true }
